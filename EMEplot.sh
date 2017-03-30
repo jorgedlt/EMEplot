@@ -33,7 +33,7 @@ j=$( ${datebin} -d -${k}hours +"%Y-%m-%dT%H:00" )
 
 loctim=$( TZ=DST+4 ${datebin} -d "$(echo ${i} | tr '.' ' '):00:00-0000" +"%Y-%m-%d %H" | cut -d' ' -f2)
 
-   #
+#
    rLOG=$(grep "${i}" "$ActiveLOG" | wc -l)
    SCTE=$(grep "${i}" "$ActiveLOG" | grep -i SCTE | wc -l)
    Hsdi=$(grep "${i}" "$ActiveLOG" | grep -i HD-SDI.Input.Not.Detected | wc -l)
